@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&family=Instrument+Serif:ital@0;1&display=swap");
+
+:root {
+  --ink: #171717;
+  --paper: #f1f0eb;
+  --line: #cac9c2;
+  --acid: #c5ff40;
+  --muted: #74746f;
+  --neo-base: #171717;
+  --neo-light: #212121;
+  --neo-dark: #0b0b0b;
+  --neo-red: #ef3d37;
+  --neo-text: #f4f2ef;
+  --neo-muted: #a6a4a0;
+  --neo-copy: #d9d7d3;
+  --neo-shadow-dark: #0b0b0b;
+  --neo-shadow-light: #242424;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  --neo-base: #f7e9e8;
+  --neo-light: #fff7f6;
+  --neo-dark: #e7d3d1;
+  --neo-red: #c8322d;
+  --neo-text: #171717;
+  --neo-muted: #665858;
+  --neo-copy: #373030;
+  --neo-shadow-dark: rgba(93, 54, 51, 0.16);
+  --neo-shadow-light: rgba(255, 247, 246, 0.95);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--neo-base);
+  color: var(--neo-text);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+
+#root {
+  position: relative;
+  isolation: isolate;
+  min-height: 100vh;
+}
+
+h2 em {
+  font-family: "Instrument Serif", serif;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

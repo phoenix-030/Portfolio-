@@ -1,0 +1,60 @@
+.pumpkin {
+  --pumpkin-opacity: 0.09;
+  --pumpkin-flash-opacity: 0.2;
+
+  position: fixed;
+  z-index: 10;
+  right: clamp(-90px, -4vw, -24px);
+  bottom: clamp(-100px, -5vw, -30px);
+  width: clamp(220px, 38vw, 480px);
+  aspect-ratio: 1;
+  background: url("/pumpkin.png") center/contain no-repeat;
+  opacity: 0.09;
+  filter: invert(1);
+  mix-blend-mode: screen;
+  pointer-events: none;
+  user-select: none;
+}
+
+.pumpkin::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 18%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(239, 61, 55, 0.42), transparent 68%);
+  filter: blur(22px);
+  opacity: 0;
+}
+
+:global(:root[data-theme="light"]) .pumpkin {
+  --pumpkin-opacity: 0.055;
+  --pumpkin-flash-opacity: 0.12;
+
+  opacity: var(--pumpkin-opacity);
+  filter: none;
+  mix-blend-mode: multiply;
+}
+
+:global(:root[data-theme="light"]) .pumpkin::after {
+  background: radial-gradient(circle, rgba(200, 50, 45, 0.3), transparent 68%);
+}
+
+@media (max-width: 720px) {
+  .pumpkin {
+    --pumpkin-opacity: 0.07;
+    --pumpkin-flash-opacity: 0.16;
+
+    right: -72px;
+    bottom: -60px;
+    width: clamp(190px, 58vw, 300px);
+    opacity: var(--pumpkin-opacity);
+  }
+
+  :global(:root[data-theme="light"]) .pumpkin {
+    --pumpkin-opacity: 0.045;
+    --pumpkin-flash-opacity: 0.1;
+
+    opacity: var(--pumpkin-opacity);
+  }
+}

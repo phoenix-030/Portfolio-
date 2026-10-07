@@ -1,0 +1,8 @@
+
+.arrow {
+  display: inline-block;
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 0.7;
+}
+.social-icon{width:15px;height:15px;flex:0 0 auto}

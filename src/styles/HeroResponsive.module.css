@@ -1,0 +1,24 @@
+.heroAside {
+  min-width: 0;
+}
+
+@media (max-width: 720px) {
+  .heroAside {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .heroAside > p {
+    flex: 0 0 100%;
+  }
+
+  .heroAside .cta {
+    flex: 1 1 120px;
+    float: none;
+    justify-content: center;
+    min-width: 0;
+    margin: 0;
+    padding: 0 8px;
+  }
+}
