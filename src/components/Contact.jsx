@@ -110,7 +110,7 @@ export default function Contact() {
               <SocialIcon name="linkedin" />
               LinkedIn <Arrow className={styles["social-arrow"]} />
             </a>
-            <a href="https://www.instagram.com/memoriez_03/" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/animix_030/" target="_blank" rel="noreferrer">
               <SocialIcon name="instagram" />
               Instagram <Arrow className={styles["social-arrow"]} />
             </a>
